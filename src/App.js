@@ -1,32 +1,50 @@
-import React, { Component } from 'react'
-import FoodContainer from './components/FoodContainer'
-import './App.css'
-const baseUrl = 'http://localhost:3000/foods/'
+import React, { Component } from "react";
+import FoodContainer from "./components/FoodContainer";
+import "./App.css";
+import DeciderBox from "./components/DeciderBox";
+import Header from "./containers/Header";
+const baseUrl = "http://localhost:3000/foods/";
 
 export default class App extends Component {
-  
   state = {
-    foods:[],
-    foodCart:[],
-  }
-  
-  componentDidMount(){
+    toggle: true,
+    foods: [],
+    foodCart: [],
+  };
+
+  addToFoodCart = foodItem => {
+    const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
+    if (!inCart) {
+      this.setState({ foodCart: [...this.state.foodCart, foodItem] });
+    }
+  };
+
+  componentDidMount() {
     fetch(baseUrl)
-    .then(response => response.json())
-    .then(foods => {
-      this.setState ({
-        foods
-      })
-    })
+      .then(response => response.json())
+      .then(foods => {
+        this.setState({
+          foods,
+        });
+      });
   }
+
+  toggleState = () => this.setState({ toggle: !this.state.toggle });
 
   render() {
     return (
-      <div className ="App">
-        <FoodContainer
-          foods = {this.state.foods}
-        />
+      <div className='App'>
+        <Header toggleState={this.toggleState} toggle={this.state.toggle} />
+        {this.state.toggle ? "Munchie Options" : "Chosen Munchies"}
+        {!this.state.toggle ? (
+          <DeciderBox foodCart={this.state.foodCart} />
+        ) : (
+          <FoodContainer
+            addToFoodCart={this.addToFoodCart}
+            foods={this.state.foods}
+          />
+        )}
       </div>
-    )
+    );
   }
 }

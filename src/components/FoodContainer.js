@@ -1,11 +1,11 @@
 import React from 'react'
-import FoodCards from './FoodCards'
+import FoodCard from './FoodCard'
 
 export default function FoodContainer(props) {
 
   const displayFoods = () => {
     return props.foods.map(food => {
-      return <FoodCards 
+      return <FoodCard 
         food={food}
         key={food.id}
       />
