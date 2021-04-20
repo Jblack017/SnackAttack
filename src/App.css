@@ -1,14 +1,16 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  border: 1px solid black;
 }
 .food-card img {
   max-width: 200px;
   max-height: 200px;
 }
-.food-card{
-  padding:15px;
-  justify-content:center;
+.food-card {
+  padding: 15px;
+  justify-content: center;
+  background-color: whitesmoke;
 }
 .food-container {
   display: flex;
@@ -16,6 +18,6 @@
   text-align: center;
   justify-content: center;
 }
-h1{
+h1 {
   font-size: 20px;
 }

@@ -3,7 +3,8 @@
     {
       "id": 1,
       "name": "Flaming Hot Cheetos",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/510oWbalLKL._AC_SY445_.jpg"
+      "image": "https://images-na.ssl-images-amazon.com/images/I/510oWbalLKL._AC_SY445_.jpg",
+      "foodType": "Chips"
     },
     {
       "id": 2,
@@ -17,7 +18,6 @@
       "image": "https://target.scene7.com/is/image/Target/GUEST_5f92b995-39d7-4bc7-a7d4-ce366b8e47b9?wid=488&hei=488&fmt=pjpeg",
       "foodType": "Chips"
     },
-    
     {
       "id": 4,
       "name": "Twix",
@@ -68,15 +68,21 @@
     },
     {
       "id": 12,
-      "name": "",
-      "image": "",
-      "foodType": ""
+      "name": "Peanut Butter Half Baked",
+      "image": "https://www.benjerry.com/files/live/sites/systemsite/files/flavors/products/us/pint/peanut-butter-half-baked-detail.png",
+      "foodType": "Ice Cream"
     },
     {
       "id": 13,
-      "name": "",
-      "image": "",
-      "foodType": ""
+      "name": "Carrots and Celery",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71ib-xNV1uL._SL1500_.jpg",
+      "foodType": "Veggies"
+    },
+    {
+      "id": 14,
+      "name": "Peanut Butter, Jelly, and Doritos Sandwich",
+      "image": "https://www.amish365.com/wp-content/uploads/2015/07/dorito.jpg",
+      "foodType": "Sandwich"
     }
   ]
 }

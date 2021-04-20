@@ -1,20 +1,18 @@
-import React from 'react'
-import FoodCards from './FoodCards'
+import React from "react";
+import FoodCard from "./FoodCard";
 
 export default function FoodContainer(props) {
-
   const displayFoods = () => {
     return props.foods.map(food => {
-      return <FoodCards 
-        food={food}
-        key={food.id}
-      />
-    })
-  }
+      return (
+        <FoodCard
+          addToFoodCart={props.addToFoodCart}
+          food={food}
+          key={food.id}
+        />
+      );
+    });
+  };
 
-  return (
-    <div className = "food-container">
-      {displayFoods()}
-    </div>
-  )
+  return <div className='food-container'>{displayFoods()}</div>;
 }
