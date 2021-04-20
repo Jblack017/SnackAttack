@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import FoodContainer from './components/FoodContainer'
+import './App.css'
+const baseUrl = 'http://localhost:3000/foods/'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  
+  state = {
+    foods:[],
+    foodCart:[],
+  }
+  
+  componentDidMount(){
+    fetch(baseUrl)
+    .then(response => response.json())
+    .then(foods => {
+      this.setState ({
+        foods
+      })
+    })
+  }
+
+  render() {
+    return (
+      <div className ="App">
+        <FoodContainer
+          foods = {this.state.foods}
+        />
+      </div>
+    )
+  }
 }
-
-export default App;

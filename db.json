@@ -1,0 +1,82 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "name": "Flaming Hot Cheetos",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/510oWbalLKL._AC_SY445_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Boulder Jalapeno Cheddar",
+      "image": "https://d2d8wwwkmhfcva.cloudfront.net/400x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_2977771f-a5b1-4a2f-8a35-2fa5cad3950e.png",
+      "foodType": "Chips"
+    },
+    {
+      "id": 3,
+      "name": "Ruffles Sour Cream and Cheese",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_5f92b995-39d7-4bc7-a7d4-ce366b8e47b9?wid=488&hei=488&fmt=pjpeg",
+      "foodType": "Chips"
+    },
+    
+    {
+      "id": 4,
+      "name": "Twix",
+      "image": "https://www.candywarehouse.com/item-images/127612-01_twix-candy-bars-36-piece-box.jpg",
+      "foodType": "Candy"
+    },
+    {
+      "id": 5,
+      "name": "Sour Patch Kids Berries",
+      "image": "https://www.meijer.com/content/dam/meijer/product/0070/46/2000/06/0070462000061_a1c1_0600.png",
+      "foodType": "Candy"
+    },
+    {
+      "id": 6,
+      "name": "Starburst FaveREDS",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71fgJF8d3AL._SL1200_.jpg",
+      "foodType": "Candy"
+    },
+    {
+      "id": 7,
+      "name": "Klondike Oreo",
+      "image": "https://i5.walmartimages.com/asr/338a4dc8-ae9c-43bb-b1bc-acdbb84515d0.e7344be83b2f665f81d49a25013b81ce.jpeg",
+      "foodType": "Ice Cream"
+    },
+    {
+      "id": 8,
+      "name": "Talenti Caramel Cookie Crunch",
+      "image": "https://www.talentigelato.com/wp-content/uploads/sites/61/2019/02/xCCC-Pint_259px-w.png,qx22157.pagespeed.ic.T2l0C6jEHC.png",
+      "foodType": "Ice Cream"
+    },
+    {
+      "id": 9,
+      "name": "Blue Ribbon Strawberry Shortcake",
+      "image": "https://www.meadowbrookicecream.com/files/styles/large/public/images/product//king-size-strawberry-shortcake-ice-cream-bar.jpg?itok=9QuppHqG",
+      "foodType": "Ice Cream"
+    },
+    {
+      "id": 10,
+      "name": "Jolly Time Blasto O Butter",
+      "image": "https://d2d8wwwkmhfcva.cloudfront.net/400x/d2lnr5mha7bycj.cloudfront.net/product-image/file/large_3635b768-38da-4d03-ac48-a5d130ec4291.png",
+      "foodType": "Popcorn"
+    },
+    {
+      "id": 11,
+      "name": "Double Stuffed Oreos",
+      "image": "https://images.heb.com/is/image/HEBGrocery/001617462",
+      "foodType": "Cookie"
+    },
+    {
+      "id": 12,
+      "name": "",
+      "image": "",
+      "foodType": ""
+    },
+    {
+      "id": 13,
+      "name": "",
+      "image": "",
+      "foodType": ""
+    }
+  ]
+}
