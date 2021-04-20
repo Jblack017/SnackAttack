@@ -4,21 +4,12 @@ import "./App.css";
 import DeciderBox from "./components/DeciderBox";
 import Header from "./containers/Header";
 const baseUrl = "http://localhost:3000/foods/";
-
 export default class App extends Component {
   state = {
     toggle: true,
     foods: [],
     foodCart: [],
   };
-
-  addToFoodCart = foodItem => {
-    const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
-    if (!inCart) {
-      this.setState({ foodCart: [...this.state.foodCart, foodItem] });
-    }
-  };
-
   componentDidMount() {
     fetch(baseUrl)
       .then(response => response.json())
@@ -28,9 +19,22 @@ export default class App extends Component {
         });
       });
   }
+  
+  // addFaveIcon = foodItem => {
+  //   const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
+  //   if (!inCart){
+  //     console.log()
+  //   }
+  // }
 
+  addToFoodCart = foodItem => {
+    const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
+    if (!inCart) {
+      this.setState({ foodCart: [...this.state.foodCart, foodItem] });
+    }
+  }
+  
   toggleState = () => this.setState({ toggle: !this.state.toggle });
-
   render() {
     return (
       <div className='App'>
@@ -40,8 +44,10 @@ export default class App extends Component {
           <DeciderBox foodCart={this.state.foodCart} />
         ) : (
           <FoodContainer
-            addToFoodCart={this.addToFoodCart}
-            foods={this.state.foods}
+            addToFoodCart={ this.addToFoodCart }
+            foods={ this.state.foods }
+            foodCart={ this.state.foodCart }
+            // addFaveIcon={this.addFaveIcon}
           />
         )}
       </div>

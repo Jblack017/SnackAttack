@@ -5,9 +5,12 @@ export default function FoodContainer(props) {
 
   const displayFoods = () => {
     return props.foods.map(food => {
+      let isFave = props.foodCart.find(cartItem => cartItem === food)
       return <FoodCard 
         food={food}
         key={food.id}
+        addToFoodCart={props.addToFoodCart}
+        isFave={isFave}
       />
     })
   }
@@ -15,6 +18,7 @@ export default function FoodContainer(props) {
   return (
     <div className = "food-container">
       {displayFoods()}
+
     </div>
   )
 }

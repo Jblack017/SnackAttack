@@ -11,8 +11,8 @@
   padding: 15px;
   justify-content: center;
   background-color: whitesmoke;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
 }
 .food-container {
   display: flex;
