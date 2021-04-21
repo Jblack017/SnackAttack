@@ -9,7 +9,7 @@ export default function FoodContainer(props) {
       return <FoodCard 
         food={food}
         key={food.id}
-        addToFoodCart={props.addToFoodCart}
+        clickAction={props.clickAction}
         isFave={isFave}
       />
     })

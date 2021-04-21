@@ -1,11 +1,13 @@
 import React from "react";
 
 export default function FoodCard(props) {
-  const handleClick = () => props.addToFoodCart(props.food);
+  const handleClick = () => props.clickAction(props.food);
   // console.log(props.isFave)
 
+  // const isRandom = () => props.food === props.randomFood ? "the-chosen-one" : null
+
   return (
-    <div className='food-card' onClick={() => handleClick()}>
+    <div className={ props.food === props.randomFood ? "the-chosen-one" : 'food-card'} onClick={() => handleClick()}>
       <h2>{props.food.name}</h2>
       <img src={props.food.image} alt={props.food.name}></img>
       <h3>Food Type: {props.food.foodType}</h3>
