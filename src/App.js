@@ -22,12 +22,24 @@ export default class App extends Component {
       });
   }
 
+  foodTypeList = () => {
+    const list = this.state.foods.map(
+      food => food.foodType
+    )
+    let uniqueList = list.filter(
+      (c,index) => {
+        return list.indexOf(c) === index
+      }
+    )
+    return uniqueList.map(foodItem => <option value={foodItem} key={foodItem}>{foodItem}</option>) 
+  }
+
   handleClick = () => {
     const fave = this.pickRandom(this.state.foodCart)
     this.setState ({
       randomFood:fave
     })
-    
+    this.foodTypeList(this.state.foods)
   }
 
 pickRandom = (arr) => {
@@ -55,7 +67,8 @@ pickRandom = (arr) => {
     return (
       <div className='App'>
         <Header 
-          randomFood={this.state.randomFood} 
+          randomFood={this.state.randomFood}
+          foodTypeList={this.foodTypeList} 
           handleClick={this.handleClick} 
           toggleState={this.toggleState} 
           toggle={this.state.toggle} />        
