@@ -23,7 +23,20 @@ export default class App extends Component {
       });
   }
 
+  foodTypeList = () => {
+    const list = this.state.foods.map(
+      food => food.foodType
+    )
+    let uniqueList = list.filter(
+      (c,index) => {
+        return list.indexOf(c) === index
+      }
+    )
+    return uniqueList.map(foodItem => <option value={foodItem} key={foodItem}>{foodItem}</option>) 
+  }
+
   handleClick = () => {
+<<<<<<< HEAD
     const fave = this.pickRandom(this.state.foodCart);
     this.setState({
       randomFood: fave,
@@ -33,6 +46,18 @@ export default class App extends Component {
   pickRandom = arr => {
     return arr[Math.floor(Math.random() * arr.length)];
   };
+=======
+    const fave = this.pickRandom(this.state.foodCart)
+    this.setState ({
+      randomFood:fave
+    })
+    this.foodTypeList(this.state.foods)
+  }
+
+  pickRandom = (arr) => {
+    return arr[Math.floor(Math.random() * arr.length)]
+  }
+>>>>>>> 8a59c400bbdfa0e34301adc0fbc7960db4c8d694
 
   addToFoodCart = foodItem => {
     const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
@@ -52,6 +77,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='App'>
+<<<<<<< HEAD
         <Header
           randomFood={this.state.randomFood}
           handleClick={this.handleClick}
@@ -63,6 +89,19 @@ export default class App extends Component {
             foodCart={this.state.foodCart}
             clickAction={this.removeFromFoodCart}
             randomFood={this.state.randomFood}
+=======
+        <Header 
+          randomFood={this.state.randomFood}
+          foodTypeList={this.foodTypeList} 
+          handleClick={this.handleClick} 
+          toggleState={this.toggleState} 
+          toggle={this.state.toggle} />        
+          {!this.state.toggle ? (
+        <DeciderBox 
+          foodCart={this.state.foodCart}
+          clickAction = {this.removeFromFoodCart} 
+          randomFood = {this.state.randomFood}
+>>>>>>> 8a59c400bbdfa0e34301adc0fbc7960db4c8d694
           />
         ) : (
           <FoodContainer

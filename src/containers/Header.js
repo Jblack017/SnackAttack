@@ -10,13 +10,21 @@ export default function Header(props) {
     <div className='header'>
       <p>{props.toggle ? "Munchies Options " : "Chosen Munchies"}</p>
       <button className='button' onClick={props.toggleState}>
-        <span>{!props.toggle ? "Munchies Options " : "Chosen Munchies"}</span>
+        <span>{!props.toggle ? "Munchies Options" : "Chosen Munchies"}</span>
       </button>
       {!props.toggle ? (
         <button onClick={handleClick} className='button'>
           Randomizer 3000
         </button>
-      ) : null}
+      ) : 
+      <form>
+        <label>Choose a Snack:</label>
+          <select name="snacks" id="snacks">
+            <option value="All">All</option>
+            {props.foodTypeList()}
+          </select> 
+      </form>}
     </div>
   );
 }
+

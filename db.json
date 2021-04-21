@@ -151,6 +151,12 @@
       "name": "Swedish Fish",
       "image": "https://images-na.ssl-images-amazon.com/images/I/61aiFMExI8L._SX425_.jpg",
       "foodType": "Candy"
+    },
+    {
+      "id": 25,
+      "name": "Dried Pineapple",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41kODWpIuKL.jpg",
+      "foodType": "Fruit"
     }
     
   ]
