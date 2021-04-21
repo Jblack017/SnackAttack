@@ -51,9 +51,6 @@
   text-align: center;
 }
 
-.food-card:hover {
-}
-
 .food-card img {
   z-index: -1;
   position: absolute;
@@ -169,4 +166,57 @@
 .button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+/* RANDOM FOOD SELECTION STYLING */
+.the-chosen-one {
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: rgb(86, 86, 141);
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  contain: strict;
+  margin: 5px;
+  text-align: center;
+}
+
+.the-chosen-one img {
+  z-index: -1;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+}
+
+.the-chosen-one h2 {
+  background-color: rgb(49, 142, 230);
+  transform: rotate(-15deg);
+  border-radius: 5px;
+  opacity: 0.8;
+  margin: 0;
+  padding: 0;
+}
+.the-chosen-one h3 {
+  background-color: teal;
+  transform: rotate(11deg);
+  border-radius: 15px;
+  opacity: 0.8;
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+}
+.the-chosen-one p {
+  background-color: brown;
+  transform: rotate(-17deg);
+  border-radius: 10px;
+  opacity: 0.8;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }

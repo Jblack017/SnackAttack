@@ -83,6 +83,75 @@
       "name": "Peanut Butter, Jelly, and Doritos Sandwich",
       "image": "https://www.amish365.com/wp-content/uploads/2015/07/dorito.jpg",
       "foodType": "Sandwich"
+    },
+    
+    {
+      "id": 15,
+      "name": "Dried Mangos",
+      "image": "https://driedfoodie.com/wp-content/uploads/2020/07/dried-mango-benefits.png",
+      "foodType": "Fruit"
+    },
+    
+    {
+      "id": 16,
+      "name": "Spicy Nacho Doritos",
+      "image": "https://i5.walmartimages.com/asr/b71dda11-a08b-414e-b4e9-2435243f4e3c_1.ce964e8c760426045230eca8bd76f97d.jpeg",
+      "foodType": "Chips"
+    },
+    
+    {
+      "id": 17,
+      "name": "Wings",
+      "image": "https://c9u8e9q4.rocketcdn.me/wp-content/uploads/2019/07/Buffalo-Wings-in-the-Air-Fryer.png",
+      "foodType": "Chicken"
+    },
+    
+    {
+      "id": 18,
+      "name": "Beef Jerky",
+      "image": "https://i8.amplience.net/i/traeger/0716_Jalapeno_Jerky_RE_HE_M?w=500&sm=aspect&aspect=5:3&scaleFit=poi&$poi2$",
+      "foodType": "Jerky"
+    },
+    
+    {
+      "id": 19,
+      "name": "Siracha Nut Thins",
+      "image": "https://cdn.shopify.com/s/files/1/0329/8007/4627/products/MyDad_sCookies_c7ebae4d-1925-4a38-a4ed-75b9eadc0e08.jpg?v=1593616588",
+      "foodType": "Crackers"
+    },
+    
+    {
+      "id": 20,
+      "name": "Cookie Dough",
+      "image": "https://sugarspunrun.com/wp-content/uploads/2020/09/Edible-Cookie-Dough-Recipe-1-of-1.jpg",
+      "foodType": "Cookie"
+    },
+    
+    {
+      "id": 21,
+      "name": "Squid Jerky",
+      "image": "http://www.everyview.com/wp-content/uploads/2012/09/squidJerkyReview.jpg",
+      "foodType": "Jerky"
+    },
+    {
+      "id": 22,
+      "name": "Snyders Honey Mustard Pretzels",
+      "image": "https://i.ebayimg.com/images/g/gDsAAOSwKYBc5Q2f/s-l640.jpg",
+      "foodType": "Chips"
+    },
+    
+    {
+      "id": 23,
+      "name": "Pop-Tarts",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_3039b81e-cb06-45ae-a0e4-7184b099988c?wid=488&hei=488&fmt=pjpeg",
+      "foodType": "Pastry"
+    },
+    {
+      "id": 24,
+      "name": "Swedish Fish",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61aiFMExI8L._SX425_.jpg",
+      "foodType": "Candy"
     }
+    
   ]
 }
