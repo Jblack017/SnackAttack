@@ -20,6 +20,7 @@ export default function Header(props) {
       <form>
         <label>Choose a Snack:</label>
           <select name="snacks" id="snacks">
+            <option value="All">All</option>
             {props.foodTypeList()}
           </select> 
       </form>}
