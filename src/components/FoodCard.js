@@ -2,9 +2,7 @@ import React from "react";
 
 export default function FoodCard(props) {
   const handleClick = () => props.clickAction(props.food);
-  // console.log(props.isFave)
-
-  // const isRandom = () => props.food === props.randomFood ? "the-chosen-one" : null
+  
 
   return (
     <div className={ props.food === props.randomFood ? "the-chosen-one" : 'food-card'} onClick={() => handleClick()}>

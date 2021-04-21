@@ -33,13 +33,6 @@ pickRandom = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)]
 }
 
-
-  
-// pickRandom = (arr) => {
-//   const foods = this.state.foodCart
-//   return arr[Math.floor(Math.random() * arr.length)]
-// }
-
   addToFoodCart = foodItem => {
     const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
     if (!inCart) {
