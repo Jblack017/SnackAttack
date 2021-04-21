@@ -10,6 +10,7 @@ export default class App extends Component {
     toggle: true,
     foods: [],
     foodCart: [],
+    randomFood: {}
   };
   componentDidMount() {
     fetch(baseUrl)
@@ -21,12 +22,24 @@ export default class App extends Component {
       });
   }
 
-  // addFaveIcon = foodItem => {
-  //   const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
-  //   if (!inCart){
-  //     console.log()
-  //   }
-  // }
+  handleClick = () => {
+    const fave = this.pickRandom(this.state.foodCart)
+    this.setState ({
+      randomFood:fave
+    })
+    
+  }
+
+pickRandom = (arr) => {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+
+
+  
+// pickRandom = (arr) => {
+//   const foods = this.state.foodCart
+//   return arr[Math.floor(Math.random() * arr.length)]
+// }
 
   addToFoodCart = foodItem => {
     const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
@@ -35,19 +48,36 @@ export default class App extends Component {
     }
   };
 
+  removeFromFoodCart = foodItem => {
+    const inCart = this.state.foodCart.filter(
+      food => foodItem !== food
+    )
+    this.setState({
+      foodCart: inCart
+    })
+  }
+
   toggleState = () => this.setState({ toggle: !this.state.toggle });
   render() {
     return (
       <div className='App'>
-        <Header toggleState={this.toggleState} toggle={this.state.toggle} />
-        {!this.state.toggle ? (
-          <DeciderBox foodCart={this.state.foodCart} />
+        <Header 
+          randomFood={this.state.randomFood} 
+          handleClick={this.handleClick} 
+          toggleState={this.toggleState} 
+          toggle={this.state.toggle} />        
+          {!this.state.toggle ? (
+        <DeciderBox 
+          foodCart={this.state.foodCart}
+          clickAction = {this.removeFromFoodCart} 
+          randomFood = {this.state.randomFood}
+          />
         ) : (
-          <FoodContainer
-            addToFoodCart={this.addToFoodCart}
-            foods={this.state.foods}
-            foodCart={this.state.foodCart}
-            // addFaveIcon={this.addFaveIcon}
+        <FoodContainer
+          clickAction={this.addToFoodCart}
+          foods={this.state.foods}
+          foodCart={this.state.foodCart}
+            
           />
         )}
       </div>
