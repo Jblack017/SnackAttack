@@ -8,5 +8,5 @@ export default function DeciderBox({ foodCart }) {
     });
   };
 
-  return <div className='foodDecider'>{displayFoods()}</div>;
+  return <div className='food-container'>{displayFoods()}</div>;
 }

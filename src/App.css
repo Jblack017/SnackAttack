@@ -1,8 +1,106 @@
-* {
+.App {
+  font-family: "Zen Dots", cursive;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 50px 50px auto 50px 50px;
+  grid-template-rows: auto;
+}
+
+.header {
+  border: 1px solid black;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  text-align: center;
+  justify-content: center;
+  width: auto;
+  height: 200px;
+}
+
+.header p {
+  font-size: 2.4em;
+  margin-bottom: 0;
+}
+
+.food-container {
+  border: 1px solid black;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  min-width: 80%;
+  height: contain;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.food-card {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: whitesmoke;
+  height: 300px;
+  width: 250px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  contain: strict;
+  margin: 5px;
+  text-align: center;
+}
+
+.food-card:hover {
+}
+
+.food-card img {
+  z-index: -1;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+}
+
+.food-card h2 {
+  background-color: pink;
+  transform: rotate(-15deg);
+  border-radius: 5px;
+  opacity: 0.8;
   margin: 0;
   padding: 0;
-  border: 1px solid black;
 }
+.food-card h3 {
+  background-color: orange;
+  transform: rotate(11deg);
+  border-radius: 15px;
+  opacity: 0.8;
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
+}
+.food-card p {
+  background-color: red;
+  transform: rotate(-17deg);
+  border-radius: 10px;
+  opacity: 0.8;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+/* 
+.header button {
+  place-self: center stretch;
+}
+
+.food-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
 .food-card img {
   max-width: 200px;
   max-height: 200px;
@@ -13,13 +111,62 @@
   background-color: whitesmoke;
   max-width: 300px;
   max-height: 300px;
+} */
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
 }
-.food-container {
-  display: flex;
-  flex-wrap: wrap;
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
   text-align: center;
-  justify-content: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  z-index: 99;
 }
-h1 {
-  font-size: 20px;
+
+.button span {
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }

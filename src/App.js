@@ -19,7 +19,7 @@ export default class App extends Component {
         });
       });
   }
-  
+
   // addFaveIcon = foodItem => {
   //   const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
   //   if (!inCart){
@@ -32,21 +32,20 @@ export default class App extends Component {
     if (!inCart) {
       this.setState({ foodCart: [...this.state.foodCart, foodItem] });
     }
-  }
-  
+  };
+
   toggleState = () => this.setState({ toggle: !this.state.toggle });
   render() {
     return (
       <div className='App'>
         <Header toggleState={this.toggleState} toggle={this.state.toggle} />
-        {this.state.toggle ? "Munchie Options" : "Chosen Munchies"}
         {!this.state.toggle ? (
           <DeciderBox foodCart={this.state.foodCart} />
         ) : (
           <FoodContainer
-            addToFoodCart={ this.addToFoodCart }
-            foods={ this.state.foods }
-            foodCart={ this.state.foodCart }
+            addToFoodCart={this.addToFoodCart}
+            foods={this.state.foods}
+            foodCart={this.state.foodCart}
             // addFaveIcon={this.addFaveIcon}
           />
         )}
