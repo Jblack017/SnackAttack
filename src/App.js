@@ -10,8 +10,9 @@ export default class App extends Component {
     toggle: true,
     foods: [],
     foodCart: [],
-    randomFood: {}
+    randomFood: {},
   };
+
   componentDidMount() {
     fetch(baseUrl)
       .then(response => response.json())
@@ -23,16 +24,15 @@ export default class App extends Component {
   }
 
   handleClick = () => {
-    const fave = this.pickRandom(this.state.foodCart)
-    this.setState ({
-      randomFood:fave
-    })
-    
-  }
+    const fave = this.pickRandom(this.state.foodCart);
+    this.setState({
+      randomFood: fave,
+    });
+  };
 
-pickRandom = (arr) => {
-  return arr[Math.floor(Math.random() * arr.length)]
-}
+  pickRandom = arr => {
+    return arr[Math.floor(Math.random() * arr.length)];
+  };
 
   addToFoodCart = foodItem => {
     const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
@@ -42,35 +42,33 @@ pickRandom = (arr) => {
   };
 
   removeFromFoodCart = foodItem => {
-    const inCart = this.state.foodCart.filter(
-      food => foodItem !== food
-    )
+    const inCart = this.state.foodCart.filter(food => foodItem !== food);
     this.setState({
-      foodCart: inCart
-    })
-  }
+      foodCart: inCart,
+    });
+  };
 
   toggleState = () => this.setState({ toggle: !this.state.toggle });
   render() {
     return (
       <div className='App'>
-        <Header 
-          randomFood={this.state.randomFood} 
-          handleClick={this.handleClick} 
-          toggleState={this.toggleState} 
-          toggle={this.state.toggle} />        
-          {!this.state.toggle ? (
-        <DeciderBox 
-          foodCart={this.state.foodCart}
-          clickAction = {this.removeFromFoodCart} 
-          randomFood = {this.state.randomFood}
+        <Header
+          randomFood={this.state.randomFood}
+          handleClick={this.handleClick}
+          toggleState={this.toggleState}
+          toggle={this.state.toggle}
+        />
+        {!this.state.toggle ? (
+          <DeciderBox
+            foodCart={this.state.foodCart}
+            clickAction={this.removeFromFoodCart}
+            randomFood={this.state.randomFood}
           />
         ) : (
-        <FoodContainer
-          clickAction={this.addToFoodCart}
-          foods={this.state.foods}
-          foodCart={this.state.foodCart}
-            
+          <FoodContainer
+            clickAction={this.addToFoodCart}
+            foods={this.state.foods}
+            foodCart={this.state.foodCart}
           />
         )}
       </div>
