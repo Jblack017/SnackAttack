@@ -8,9 +8,10 @@ const baseUrl = "http://localhost:3000/foods/";
 export default class App extends Component {
   state = {
     toggle: true,
-    foods: [],
+    foods: [[],[]],
     foodCart: [],
-    randomFood: {}
+    randomFood: {},
+    foodDropDown: [],
   };
   componentDidMount() {
     fetch(baseUrl)
@@ -19,6 +20,11 @@ export default class App extends Component {
         this.setState({
           foods,
         });
+      })
+      .then(foodDropDown => {
+        this.setState({
+
+        })
       });
   }
 
@@ -83,7 +89,7 @@ export default class App extends Component {
           clickAction={this.addToFoodCart}
           foods={this.state.foods}
           foodCart={this.state.foodCart}
-            
+          foodDropDown={this.state.foodDropDown}
           />
         )}
       </div>
