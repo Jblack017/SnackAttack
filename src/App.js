@@ -9,60 +9,51 @@ export default class App extends Component {
   state = {
     toggle: true,
     foods: [],
+    filteredFoods: [],
+    foodsDropdown: [],
     foodCart: [],
     randomFood: {},
+    filter: "All",
   };
 
   componentDidMount() {
     fetch(baseUrl)
       .then(response => response.json())
       .then(foods => {
-        this.setState({
-          foods,
-        });
+        this.setState({ foods: foods, foodsDropdown: foods });
       });
   }
 
   foodTypeList = () => {
-    const list = this.state.foods.map(
-      food => food.foodType
-    )
-    let uniqueList = list.filter(
-      (c,index) => {
-        return list.indexOf(c) === index
-      }
-    )
-    return uniqueList.map(foodItem => <option value={foodItem} key={foodItem}>{foodItem}</option>) 
-  }
+    const list = this.state.foodsDropdown.map(food => food.foodType);
+    let uniqueList = list.filter((c, index) => {
+      return list.indexOf(c) === index;
+    });
+    return uniqueList.sort().map(foodItem => (
+      <option value={foodItem} key={foodItem}>
+        {foodItem}
+      </option>
+    ));
+  };
 
   handleClick = () => {
-<<<<<<< HEAD
     const fave = this.pickRandom(this.state.foodCart);
     this.setState({
       randomFood: fave,
     });
+    this.foodTypeList(this.state.foods);
   };
 
   pickRandom = arr => {
     return arr[Math.floor(Math.random() * arr.length)];
   };
-=======
-    const fave = this.pickRandom(this.state.foodCart)
-    this.setState ({
-      randomFood:fave
-    })
-    this.foodTypeList(this.state.foods)
-  }
-
-  pickRandom = (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)]
-  }
->>>>>>> 8a59c400bbdfa0e34301adc0fbc7960db4c8d694
 
   addToFoodCart = foodItem => {
     const inCart = this.state.foodCart.find(food => food.id === foodItem.id);
     if (!inCart) {
       this.setState({ foodCart: [...this.state.foodCart, foodItem] });
+    } else {
+      this.removeFromFoodCart(foodItem);
     }
   };
 
@@ -73,13 +64,23 @@ export default class App extends Component {
     });
   };
 
+  filterSelections = foodType => {
+    if (this.state.filter !== "All") {
+      const filteredFoods = this.state.foods.filter(
+        food => foodType === food.foodType
+      );
+      this.setState({ filteredFoods });
+    }
+  };
+
   toggleState = () => this.setState({ toggle: !this.state.toggle });
   render() {
     return (
       <div className='App'>
-<<<<<<< HEAD
         <Header
+          filterSelections={this.filterSelections}
           randomFood={this.state.randomFood}
+          foodTypeList={this.foodTypeList}
           handleClick={this.handleClick}
           toggleState={this.toggleState}
           toggle={this.state.toggle}
@@ -89,24 +90,12 @@ export default class App extends Component {
             foodCart={this.state.foodCart}
             clickAction={this.removeFromFoodCart}
             randomFood={this.state.randomFood}
-=======
-        <Header 
-          randomFood={this.state.randomFood}
-          foodTypeList={this.foodTypeList} 
-          handleClick={this.handleClick} 
-          toggleState={this.toggleState} 
-          toggle={this.state.toggle} />        
-          {!this.state.toggle ? (
-        <DeciderBox 
-          foodCart={this.state.foodCart}
-          clickAction = {this.removeFromFoodCart} 
-          randomFood = {this.state.randomFood}
->>>>>>> 8a59c400bbdfa0e34301adc0fbc7960db4c8d694
           />
         ) : (
           <FoodContainer
+            foodsDropdown={this.state.foodsDropdown}
             clickAction={this.addToFoodCart}
-            foods={this.state.foods}
+            foods={this.state.filteredFoods}
             foodCart={this.state.foodCart}
           />
         )}

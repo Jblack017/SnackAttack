@@ -3,7 +3,10 @@ import React from "react";
 export default function Header(props) {
   const handleClick = () => {
     props.handleClick();
-    setTimeout(console.log(props.randomFood), 2200);
+  };
+
+  const handleChange = event => {
+    props.filterSelections(event.target.value);
   };
 
   return (
@@ -16,15 +19,15 @@ export default function Header(props) {
         <button onClick={handleClick} className='button'>
           Randomizer 3000
         </button>
-      ) : 
-      <form>
-        <label>Choose a Snack:</label>
-          <select name="snacks" id="snacks">
-            <option value="All">All</option>
+      ) : (
+        <form onChange={handleChange}>
+          <label>Choose a Snack Type:</label>
+          <select name='snacks' id='snacks'>
+            <option value='All'>All</option>
             {props.foodTypeList()}
-          </select> 
-      </form>}
+          </select>
+        </form>
+      )}
     </div>
   );
 }
-
