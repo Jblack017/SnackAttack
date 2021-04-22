@@ -38,10 +38,11 @@ export default class PopUpForm extends Component {
       <Popup
         trigger={<button>Submit Your Munchies</button>}
         position='left top'
+        modal={true}
       >
         <div>
           <form onSubmit={this.handleSubmit}>
-            <label for='snackName'>Name:</label>
+            <label htmlFor='snackName'>Name:</label>
             <br></br>
             <input
               value={this.state.snackName}
@@ -51,7 +52,7 @@ export default class PopUpForm extends Component {
               name='snackName'
             ></input>
             <br></br>
-            <label for='snackImage'>Snack Image:</label>
+            <label htmlFor='snackImage'>Snack Image:</label>
             <input
               value={this.state.snackImage}
               onChange={this.handleChange}
@@ -60,7 +61,7 @@ export default class PopUpForm extends Component {
               name='snackImage'
             ></input>
             <br></br>
-            <label for='snackType'>Snack Type:</label>
+            <label htmlFor='snackType'>Snack Type:</label>
             <input
               value={this.state.snackType}
               onChange={this.handleChange}
