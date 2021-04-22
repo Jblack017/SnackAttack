@@ -1,7 +1,6 @@
 import React from "react";
 import PopUpForm from "../components/PopUpForm";
 
-
 export default function Header(props) {
   const handleClick = () => {
     props.handleClick();
@@ -24,7 +23,7 @@ export default function Header(props) {
 
   return (
     <div className='header'>
-      <PopUpForm handleSubmit={props.handleSubmit} handleChange={props.handleChange}/>
+      <PopUpForm addNewSnack={props.addNewSnack} />
       <p>{props.toggle ? "Munchies Options " : "Chosen Munchies"}</p>
       <button className='button' onClick={props.toggleState}>
         <span>{!props.toggle ? "Munchies Options" : "Chosen Munchies"}</span>
@@ -42,7 +41,6 @@ export default function Header(props) {
           </select>
         </form>
       )}
-      
     </div>
   );
 }
