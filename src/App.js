@@ -8,6 +8,7 @@ const baseUrl = "http://localhost:3000/foods/";
 export default class App extends Component {
   state = {
     toggle: true,
+    newFood: [],
     foods: [],
     filteredFoods: [],
     foodsDropdown: [],
@@ -22,7 +23,6 @@ export default class App extends Component {
       .then(foods => this.updateFoodStates(foods));
   }
 
-  
 
   updateFoodStates = foods => {
     const snackTypeList = foods.map(food => food.foodType);
@@ -79,6 +79,8 @@ export default class App extends Component {
           toggleState={this.toggleState}
           toggle={this.state.toggle}
           filterSelections={this.filterSelections}
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
         />
         {!this.state.toggle ? (
           <DeciderBox

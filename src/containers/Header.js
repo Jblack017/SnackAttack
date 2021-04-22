@@ -24,7 +24,7 @@ export default function Header(props) {
 
   return (
     <div className='header'>
-      <PopUpForm />
+      <PopUpForm handleSubmit={props.handleSubmit} handleChange={props.handleChange}/>
       <p>{props.toggle ? "Munchies Options " : "Chosen Munchies"}</p>
       <button className='button' onClick={props.toggleState}>
         <span>{!props.toggle ? "Munchies Options" : "Chosen Munchies"}</span>
@@ -34,7 +34,7 @@ export default function Header(props) {
           Randomizer 3000
         </button>
       ) : (
-        <form onChange={handleChange}>
+        <form onChange={handleChange} >
           <label>Choose a Snack Type:</label>
           <select name='snacks' id='snacks'>
             <option value='All'>All</option>
