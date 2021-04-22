@@ -2,8 +2,8 @@ import React from "react";
 import FoodCard from "./FoodCard";
 
 export default function FoodContainer(props) {
-  const displayFoods = () => {
-    return props.foods.map(food => {
+  const displayFoods = arr => {
+    return arr.map(food => {
       let isFave = props.foodCart.find(cartItem => cartItem === food);
       return (
         <FoodCard
@@ -16,5 +16,11 @@ export default function FoodContainer(props) {
     });
   };
 
-  return <div className='food-container'>{displayFoods()}</div>;
+  return (
+    <div className='food-container'>
+      {props.filterSelection === "All"
+        ? displayFoods(props.foods)
+        : displayFoods(props.filteredFoods)}
+    </div>
+  );
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import PopUpForm from "../components/PopUpForm";
+
 
 export default function Header(props) {
   const handleClick = () => {
@@ -9,8 +11,20 @@ export default function Header(props) {
     props.filterSelections(event.target.value);
   };
 
+  const handleList = () => {
+    const listItem = props.foodsDropdown.sort().map(food => {
+      return (
+        <option key={food} value={food}>
+          {food}
+        </option>
+      );
+    });
+    return listItem;
+  };
+
   return (
     <div className='header'>
+      <PopUpForm />
       <p>{props.toggle ? "Munchies Options " : "Chosen Munchies"}</p>
       <button className='button' onClick={props.toggleState}>
         <span>{!props.toggle ? "Munchies Options" : "Chosen Munchies"}</span>
@@ -24,10 +38,11 @@ export default function Header(props) {
           <label>Choose a Snack Type:</label>
           <select name='snacks' id='snacks'>
             <option value='All'>All</option>
-            {props.foodTypeList()}
+            {handleList()}
           </select>
         </form>
       )}
+      
     </div>
   );
 }
