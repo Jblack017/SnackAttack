@@ -19,21 +19,17 @@ export default class App extends Component {
   componentDidMount() {
     fetch(baseUrl)
       .then(response => response.json())
-      .then(foods => {
-        this.setState({ foods: foods, foodsDropdown: foods });
-      });
+      .then(foods => this.updateFoodStates(foods));
   }
 
-  foodTypeList = () => {
-    const list = this.state.foodsDropdown.map(food => food.foodType);
-    let uniqueList = list.filter((c, index) => {
-      return list.indexOf(c) === index;
+  updateFoodStates = foods => {
+    const snackTypeList = foods.map(food => food.foodType);
+    console.log(snackTypeList);
+    let foodsDropdown = snackTypeList.filter((c, index) => {
+      return snackTypeList.indexOf(c) === index;
     });
-    return uniqueList.sort().map(foodItem => (
-      <option value={foodItem} key={foodItem}>
-        {foodItem}
-      </option>
-    ));
+    console.log(foodsDropdown);
+    this.setState({ foods, foodsDropdown });
   };
 
   handleClick = () => {
@@ -41,7 +37,6 @@ export default class App extends Component {
     this.setState({
       randomFood: fave,
     });
-    this.foodTypeList(this.state.foods);
   };
 
   pickRandom = arr => {
@@ -65,12 +60,10 @@ export default class App extends Component {
   };
 
   filterSelections = foodType => {
-    if (this.state.filter !== "All") {
-      const filteredFoods = this.state.foods.filter(
-        food => foodType === food.foodType
-      );
-      this.setState({ filteredFoods });
-    }
+    const snackItem = this.state.foods.filter(
+      food => food.foodType === foodType
+    );
+    this.setState({ filteredFoods: snackItem, filter: foodType });
   };
 
   toggleState = () => this.setState({ toggle: !this.state.toggle });
@@ -78,12 +71,12 @@ export default class App extends Component {
     return (
       <div className='App'>
         <Header
-          filterSelections={this.filterSelections}
           randomFood={this.state.randomFood}
-          foodTypeList={this.foodTypeList}
+          foodsDropdown={this.state.foodsDropdown}
           handleClick={this.handleClick}
           toggleState={this.toggleState}
           toggle={this.state.toggle}
+          filterSelections={this.filterSelections}
         />
         {!this.state.toggle ? (
           <DeciderBox
@@ -93,9 +86,10 @@ export default class App extends Component {
           />
         ) : (
           <FoodContainer
-            foodsDropdown={this.state.foodsDropdown}
+            filterSelection={this.state.filter}
+            filteredFoods={this.state.filteredFoods}
             clickAction={this.addToFoodCart}
-            foods={this.state.filteredFoods}
+            foods={this.state.foods}
             foodCart={this.state.foodCart}
           />
         )}

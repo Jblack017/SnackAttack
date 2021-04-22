@@ -9,6 +9,13 @@ export default function Header(props) {
     props.filterSelections(event.target.value);
   };
 
+  const handleList = () => {
+    const listItem = props.foodsDropdown.sort().map(food => {
+      return <option value={food}>{food}</option>;
+    });
+    return listItem;
+  };
+
   return (
     <div className='header'>
       <p>{props.toggle ? "Munchies Options " : "Chosen Munchies"}</p>
@@ -24,7 +31,7 @@ export default function Header(props) {
           <label>Choose a Snack Type:</label>
           <select name='snacks' id='snacks'>
             <option value='All'>All</option>
-            {props.foodTypeList()}
+            {handleList()}
           </select>
         </form>
       )}
