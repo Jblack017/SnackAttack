@@ -22,15 +22,11 @@ export default class App extends Component {
       .then(foods => this.updateFoodStates(foods));
   }
 
-  
-
   updateFoodStates = foods => {
     const snackTypeList = foods.map(food => food.foodType);
-    console.log(snackTypeList);
     let foodsDropdown = snackTypeList.filter((c, index) => {
       return snackTypeList.indexOf(c) === index;
     });
-    console.log(foodsDropdown);
     this.setState({ foods, foodsDropdown });
   };
 
@@ -68,6 +64,10 @@ export default class App extends Component {
     this.setState({ filteredFoods: snackItem, filter: foodType });
   };
 
+  addNewSnack = snack => {
+    this.setState({ foods: [...this.state.foods, snack] });
+  };
+
   toggleState = () => this.setState({ toggle: !this.state.toggle });
   render() {
     return (
@@ -79,6 +79,7 @@ export default class App extends Component {
           toggleState={this.toggleState}
           toggle={this.state.toggle}
           filterSelections={this.filterSelections}
+          addNewSnack={this.addNewSnack}
         />
         {!this.state.toggle ? (
           <DeciderBox
