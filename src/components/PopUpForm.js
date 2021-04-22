@@ -27,6 +27,11 @@ export default class PopUpForm extends Component {
       },
       body: JSON.stringify(dataPack),
     });
+    this.setState({
+    snackName: "",
+    snackImage: "",
+    snackType: ""
+    }) 
   };
 
   handleChange = event => {
@@ -36,13 +41,15 @@ export default class PopUpForm extends Component {
   render() {
     return (
       <Popup
-        trigger={<button>Submit Your Munchies</button>}
+        trigger={<button className="trigger-button">Submit Your Munchies</button>}
         position='left top'
+        modal= {true}
+        className="pop-up"
       >
-        <div>
+        <div className="form">
           <form onSubmit={this.handleSubmit}>
-            <label for='snackName'>Name:</label>
-            <br></br>
+            <label htmlFor='snackName'>Name:</label>
+            
             <input
               value={this.state.snackName}
               onChange={this.handleChange}
@@ -51,16 +58,17 @@ export default class PopUpForm extends Component {
               name='snackName'
             ></input>
             <br></br>
-            <label for='snackImage'>Snack Image:</label>
+            <label htmlFor='snackImage'>Snack Image:</label>
+
             <input
               value={this.state.snackImage}
               onChange={this.handleChange}
-              type='url'
+              type='text'
               id='snackImage'
               name='snackImage'
             ></input>
             <br></br>
-            <label for='snackType'>Snack Type:</label>
+            <label htmlFor='snackType'>Snack Type:</label>
             <input
               value={this.state.snackType}
               onChange={this.handleChange}
@@ -69,7 +77,7 @@ export default class PopUpForm extends Component {
               name='snackType'
             ></input>
             <br></br>
-            <input type='submit' value='Submit' />
+            <input type='submit' value='Submit'/>
           </form>
         </div>
       </Popup>
