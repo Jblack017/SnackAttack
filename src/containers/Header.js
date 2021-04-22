@@ -11,7 +11,11 @@ export default function Header(props) {
 
   const handleList = () => {
     const listItem = props.foodsDropdown.sort().map(food => {
-      return <option value={food}>{food}</option>;
+      return (
+        <option key={food} value={food}>
+          {food}
+        </option>
+      );
     });
     return listItem;
   };
