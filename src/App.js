@@ -14,7 +14,7 @@ export default class App extends Component {
     filteredFoods: [],
     foodsDropdown: [],
     foodCart: [],
-    randomFood: [],
+    randomFood: {},
     filter: "All",
   };
 

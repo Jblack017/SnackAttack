@@ -6,7 +6,9 @@ export default function FoodCard(props) {
   return (
     <div
       className={
-        props.food === props.randomFood ? "the-chosen-one" : "food-card"
+        props.food === props.randomFood
+          ? "the-chosen-one bounce"
+          : "food-card bounce"
       }
       onClick={() => handleClick()}
     >
