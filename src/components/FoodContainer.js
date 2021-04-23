@@ -16,6 +16,7 @@ export default function FoodContainer(props) {
     });
   };
 
+
   return (
     <div className='food-container'>
       {props.filterSelection === "All"

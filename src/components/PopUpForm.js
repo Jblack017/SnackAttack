@@ -41,15 +41,13 @@ export default class PopUpForm extends Component {
   render() {
     return (
       <Popup
-        trigger={
-          <button className='trigger-button'>Submit Your Munchies</button>
-        }
+        trigger={<button className='trigger-button'>Submit A Snack</button>}
         position='left top'
         modal={true}
         className='pop-up'
       >
         <div className='form'>
-          <form onSubmit={this.handleSubmit} className="add-snack-bar">
+          <form onSubmit={this.handleSubmit} className='add-snack-bar'>
             <label htmlFor='snackName'>Name:</label>
 
             <input
@@ -81,7 +79,7 @@ export default class PopUpForm extends Component {
               required
             ></input>
             <br></br>
-            <input type='submit' value='Submit' />
+            <input className='submit-button' type='submit' value='Submit' />
           </form>
         </div>
       </Popup>

@@ -2,14 +2,13 @@
   from {
     margin-left: 100%;
     width: 300%;
-  
   }
   to {
     margin-left: 0%;
     width: 100%;
-
   }
 }
+
 /* steven messed around here */
 
 .trigger-button {
@@ -27,31 +26,69 @@
   cursor: pointer;
   margin: 5px;
   z-index: 99;
-  opacity: .9;
-  font-size: 17px
+  opacity: 0.9;
+  font-size: 17px;
 }
 .toggle-header {
   background-color: #35836d;
   font-size: 30px;
   color: black;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .drop-down-label {
   background-color: #35836d;
-  opacity: .9;
+  opacity: 0.9;
 }
 /* to hereeeeeeeeeeeeeeee */
+
+#popup-2,
+.add-snack-bar {
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: purple;
+  font-size: 1.3em;
+  color: pink;
+  font-weight: 700;
+  width: 250px;
+}
+
+#snackName,
+#snackImage,
+#snackType {
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  width: 210px;
+  margin: 3px;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+.submit-button {
+  justify-self: center;
+  padding: 5px;
+  margin: 10px;
+  width: 110px;
+  font-weight: 700;
+  font-size: 1em;
+}
+
 .App {
+  background-color: black;
+  background-position: center;
   font-family: "Zen Dots", cursive;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 50px 50px auto 50px 50px;
   grid-template-rows: auto;
 }
 
 .header {
-  border: 3px solid whitesmoke;
+  z-index: 50;
   border-radius: 5px;
   grid-column-start: 2;
   grid-column-end: 5;
@@ -62,11 +99,17 @@
   width: auto;
   height: 250px;
   overflow: hidden;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuChl3oJwEqEMzRO4wikZ9RRFp5L3pxDp8JQ&usqp=CAU");
+  /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuChl3oJwEqEMzRO4wikZ9RRFp5L3pxDp8JQ&usqp=CAU"); */
   background-position: center;
-  background-size: 420px;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-color: #d6fcf1;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(214, 252, 241, 1),
+    rgba(0, 0, 0, 0.75)
+  );
 }
 
 .header p {
@@ -81,7 +124,6 @@
 
 .food-container {
   border-radius: 5px;
-  background-image: url("http://4.bp.blogspot.com/-qqpzhBUv1BI/Va4hML9MvqI/AAAAAAAAApA/ayhQlM5mrFs/s1600/tunnel1.jpg");
   background-position: center;
   grid-column-start: 2;
   grid-column-end: 5;
@@ -93,6 +135,11 @@
   flex-wrap: wrap;
   justify-content: center;
   color: #f5f5f5;
+  z-index: 50;
+}
+
+html {
+  background-color: black;
 }
 
 .food-card {
@@ -185,7 +232,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: red;
+  background: #f4511e;
   border-radius: 10px;
 }
 
@@ -199,13 +246,13 @@
   font-size: 28px;
   padding: 20px;
   width: 300px;
-  height:55px;
+  height: 55px;
   font-size: 17px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
   z-index: 99;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .button span {
@@ -286,4 +333,34 @@
   margin: 0;
   padding: 0;
   position: absolute;
+}
+
+.video {
+  z-index: 1;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation-name: video;
+  animation-duration: 100s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+@keyframes video {
+  0% {
+    transform: scale(2) rotate(360deg);
+  }
+  35% {
+    transform: scale(2) rotate(-15deg);
+  }
+  50% {
+    transform: scale(2) rotate(720deg);
+  }
+  75% {
+    transform: scale(2) rotate(-75deg);
+  }
+  100% {
+    transform: scale(2) rotate(900deg);
+  }
 }

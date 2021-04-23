@@ -3,6 +3,7 @@ import FoodContainer from "./components/FoodContainer";
 import "./App.css";
 import DeciderBox from "./components/DeciderBox";
 import Header from "./containers/Header";
+import Video from "./video/smoke.mp4";
 
 const baseUrl = "http://localhost:3000/foods/";
 export default class App extends Component {
@@ -13,7 +14,7 @@ export default class App extends Component {
     filteredFoods: [],
     foodsDropdown: [],
     foodCart: [],
-    randomFood: {},
+    randomFood: [],
     filter: "All",
   };
 
@@ -35,6 +36,7 @@ export default class App extends Component {
     const fave = this.pickRandom(this.state.foodCart);
     this.setState({
       randomFood: fave,
+      foodCart: [fave, ...this.state.foodCart.filter(food => food !== fave)],
     });
   };
 
@@ -100,6 +102,14 @@ export default class App extends Component {
             foodCart={this.state.foodCart}
           />
         )}
+        <video
+          className='video'
+          autoPlay
+          loop
+          muted
+          src={Video}
+          type='video/mp4'
+        />
       </div>
     );
   }
