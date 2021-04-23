@@ -1,5 +1,13 @@
 /* steven messed around here */
 
+.title{
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  height: 300px;
+  width: 300px;
+}
 .trigger-button {
   display: inline-block;
   border-radius: 4px;
@@ -26,8 +34,7 @@
 }
 
 .drop-down-label {
-  background-color: #35836d;
-  opacity: 0.9;
+  font-size: 25px;
 }
 /* to hereeeeeeeeeeeeeeee */
 

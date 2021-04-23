@@ -19,12 +19,8 @@ export default function Header(props) {
 
   return (
     <div className='header'>
-      <p>
-        {props.toggle ? (
-          <span className='toggle-header'>Munchies Options</span>
-        ) : (
-          <span className='toggle-header'>Chosen Munchies</span>
-        )}
+      <p>SnackAttack
+        
       </p>
       <button className='button' onClick={props.toggleState}>
         <span>{!props.toggle ? "Munchies Options" : "Chosen Munchies"}</span>

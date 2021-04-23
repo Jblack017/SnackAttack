@@ -87,6 +87,7 @@ export default class App extends Component {
           toggle={this.state.toggle}
           addNewSnack={this.addNewSnack}
         />
+        <h2 className="title">Snack Attack</h2>
         {!this.state.toggle ? (
           <DeciderBox
             foodCart={this.state.foodCart}
