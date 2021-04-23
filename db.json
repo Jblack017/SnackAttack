@@ -187,34 +187,22 @@
       "id": 31
     },
     {
-      "name": "asdf",
-      "image": "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/5455_Gummy+Bears+-+1-Ym6Xt-pW-large.jpg",
-      "foodType": "asdf",
+      "name": "Cheddar Cheese",
+      "image": "http://cdn.cnn.com/cnnnext/dam/assets/200623110902-cheddar-cubes.jpg",
+      "foodType": "Cheese",
       "id": 32
     },
     {
-      "name": "asdf",
-      "image": "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/5455_Gummy+Bears+-+1-Ym6Xt-pW-large.jpg",
-      "foodType": "asdf",
+      "name": "Cinnamon Toast Crunch",
+      "image": "https://imagez.tmz.com/image/21/4by3/2021/03/23/211c66c78c944c33acb90625297add61_md.jpg",
+      "foodType": "Cereal ",
       "id": 33
     },
     {
-      "name": "Cake Batter Cookie",
-      "image": "https://crumbl.video/71c9e0cb-2a78-42bf-bbd3-8f63d3c24846_ChilledTwixFIXED.png",
-      "foodType": "Cookie",
+      "name": "S'mores Poptart",
+      "image": "https://www.familydollar.com/ccstore/v1/images/?source=/file/v7329171227639094989/products/FD1218253.jpg&height=475&width=475",
+      "foodType": "Pastry",
       "id": 34
-    },
-    {
-      "name": "Cake Batter Cookie",
-      "image": "https://crumbl.video/9fad49bb-0bca-40c8-a11a-27b443267d64_CakeBatter_Aerial_Tech.png",
-      "foodType": "Cookie",
-      "id": 35
-    },
-    {
-      "name": "Cake Batter Cookie",
-      "image": "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/5455_Gummy+Bears+-+1-Ym6Xt-pW-large.jpg",
-      "foodType": "Cookie",
-      "id": 36
     }
   ]
 }

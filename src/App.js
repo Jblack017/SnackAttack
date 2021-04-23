@@ -14,7 +14,7 @@ export default class App extends Component {
     filteredFoods: [],
     foodsDropdown: [],
     foodCart: [],
-    randomFood: [],
+    randomFood: {},
     filter: "All",
   };
 
@@ -68,7 +68,7 @@ export default class App extends Component {
   };
 
   addNewSnack = snack => {
-    this.setState({ foods: [snack, ...this.state.foods] });
+    this.setState({ foods: [snack, ...this.state.foods], foodCart: [snack, ...this.state.foodCart ] });
   };
 
   toggleState = () => {
@@ -110,7 +110,9 @@ export default class App extends Component {
           src={Video}
           type='video/mp4'
         />
+        <footer className="footer"><p>©JScoobEntertainmentGlobal, Inc. All rights reserved.<br/>Created by: Jumpin' Josh  & Scuba Steve</p></footer>
       </div>
+
     );
   }
 }
