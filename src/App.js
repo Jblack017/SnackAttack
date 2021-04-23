@@ -8,6 +8,7 @@ const baseUrl = "http://localhost:3000/foods/";
 export default class App extends Component {
   state = {
     toggle: true,
+    newFood: [],
     foods: [],
     filteredFoods: [],
     foodsDropdown: [],
@@ -24,7 +25,7 @@ export default class App extends Component {
 
   updateFoodStates = foods => {
     const snackTypeList = foods.map(food => food.foodType);
-    let foodsDropdown = snackTypeList.filter((c, index) => {
+    let foodsDropdown = snackTypeList.sort().filter((c, index) => {
       return snackTypeList.indexOf(c) === index;
     });
     this.setState({ foods, foodsDropdown });
@@ -58,27 +59,30 @@ export default class App extends Component {
   };
 
   filterSelections = foodType => {
-    const snackItem = this.state.foods.filter(
+    const snackItems = this.state.foods.filter(
       food => food.foodType === foodType
     );
-    this.setState({ filteredFoods: snackItem, filter: foodType });
+    this.setState({ filteredFoods: snackItems, filter: foodType });
   };
 
   addNewSnack = snack => {
-    this.setState({ foods: [...this.state.foods, snack] });
+    this.setState({ foods: [snack, ...this.state.foods] });
   };
 
-  toggleState = () => this.setState({ toggle: !this.state.toggle });
+  toggleState = () => {
+    this.setState({ toggle: !this.state.toggle, randomFood: {} });
+  };
+
   render() {
     return (
       <div className='App'>
         <Header
+          filterSelections={this.filterSelections}
           randomFood={this.state.randomFood}
           foodsDropdown={this.state.foodsDropdown}
           handleClick={this.handleClick}
           toggleState={this.toggleState}
           toggle={this.state.toggle}
-          filterSelections={this.filterSelections}
           addNewSnack={this.addNewSnack}
         />
         {!this.state.toggle ? (

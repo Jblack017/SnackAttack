@@ -11,7 +11,7 @@ export default function Header(props) {
   };
 
   const handleList = () => {
-    const listItem = props.foodsDropdown.sort().map(food => {
+    const listItem = props.foodsDropdown.map(food => {
       return (
         <option key={food} value={food}>
           {food}
@@ -34,7 +34,7 @@ export default function Header(props) {
         </button>
       ) : (
         <form onChange={handleChange}>
-          <label>Choose a Snack Type:</label>
+          <label className='drop-down-label'>Choose a Snack Type:</label>
           <select name='snacks' id='snacks'>
             <option value='All'>All</option>
             {handleList()}

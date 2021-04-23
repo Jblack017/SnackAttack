@@ -64,7 +64,7 @@
       "id": 11,
       "name": "Double Stuffed Oreos",
       "image": "https://images.heb.com/is/image/HEBGrocery/001617462",
-      "foodType": "Cookie"
+      "foodType": "Cookies"
     },
     {
       "id": 12,
@@ -118,7 +118,7 @@
       "id": 20,
       "name": "Cookie Dough",
       "image": "https://sugarspunrun.com/wp-content/uploads/2020/09/Edible-Cookie-Dough-Recipe-1-of-1.jpg",
-      "foodType": "Cookie"
+      "foodType": "Cookies"
     },
     {
       "id": 21,
@@ -157,9 +157,9 @@
       "id": 26
     },
     {
-      "name": "Gummy Bears",
-      "image": "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/5455_Gummy+Bears+-+1-Ym6Xt-pW-large.jpg",
-      "foodType": "Candy",
+      "name": "Smores Cookie",
+      "image": "https://crumbl.video/6f460083-e6b4-4f9c-8d84-72840eec5798_SmoresBrownieFIXED.png",
+      "foodType": "Cookies",
       "id": 27
     },
     {
@@ -169,10 +169,46 @@
       "id": 28
     },
     {
-      "name": "sdg",
-      "image": "https://www.etst.com",
-      "foodType": "sdf",
+      "name": "Twix Cookie",
+      "image": "https://crumbl.video/71c9e0cb-2a78-42bf-bbd3-8f63d3c24846_ChilledTwixFIXED.png",
+      "foodType": "Cookies",
       "id": 29
+    },
+    {
+      "name": "Cake Batter Cookie",
+      "image": "https://crumbl.video/9fad49bb-0bca-40c8-a11a-27b443267d64_CakeBatter_Aerial_Tech.png",
+      "foodType": "Cookies",
+      "id": 30
+    },
+    {
+      "name": "Peanut Butter & Jelly Cookie",
+      "image": "https://crumbl.video/ce0f0e0b-2ae8-400d-baa3-ad250b861948_PeanutButterJelly_Aerial_Tech.png",
+      "foodType": "Cookies",
+      "id": 31
+    },
+    {
+      "name": "Name",
+      "image": "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/5455_Gummy+Bears+-+1-Ym6Xt-pW-large.jpg",
+      "foodType": "Snack Type",
+      "id": 32
+    },
+    {
+      "name": "",
+      "image": "",
+      "foodType": "",
+      "id": 33
+    },
+    {
+      "name": "",
+      "image": "",
+      "foodType": "",
+      "id": 34
+    },
+    {
+      "name": "",
+      "image": "",
+      "foodType": "",
+      "id": 35
     }
   ]
 }
