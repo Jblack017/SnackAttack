@@ -187,34 +187,10 @@
       "id": 31
     },
     {
-      "name": "dfasfd",
-      "image": "https://crumbl.video/6f460083-e6b4-4f9c-8d84-72840eec5798_SmoresBrownieFIXED.png",
-      "foodType": "Cookie",
+      "name": "Name",
+      "image": "https://nuts.com/images/rackcdn/ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/5455_Gummy+Bears+-+1-Ym6Xt-pW-large.jpg",
+      "foodType": "Snack Type",
       "id": 32
-    },
-    {
-      "name": "dfasdf",
-      "image": "sdfsadf",
-      "foodType": "sdfadsfsaf",
-      "id": 33
-    },
-    {
-      "name": "weaef",
-      "image": "fasdf",
-      "foodType": "sdfasd",
-      "id": 34
-    },
-    {
-      "name": "",
-      "image": "dff",
-      "foodType": "",
-      "id": 35
-    },
-    {
-      "name": "fasdfsadfsa",
-      "image": "dfsdfsadf",
-      "foodType": "sadfsadfsdf",
-      "id": 36
     }
   ]
 }

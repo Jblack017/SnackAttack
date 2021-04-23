@@ -2,13 +2,48 @@
   from {
     margin-left: 100%;
     width: 300%;
+  
   }
   to {
     margin-left: 0%;
     width: 100%;
+
   }
 }
+.form{
+  background-color: #35836d;
+  opacity: .9;
+  border-color: #f4511e;
+}
+.trigger-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 300px;
+  height: 55px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  z-index: 99;
+  opacity: .9;
+  font-size: 17px
+}
+.toggle-header {
+  background-color: #35836d;
+  font-size: 30px;
+  color: black;
+  opacity: .8;
+}
 
+.drop-down-label {
+  background-color: #35836d;
+  opacity: .9;
+}
 .App {
   font-family: "Zen Dots", cursive;
   border: 1px solid black;
@@ -166,10 +201,13 @@
   font-size: 28px;
   padding: 20px;
   width: 300px;
+  height:55px;
+  font-size: 17px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
   z-index: 99;
+  opacity: .9;
 }
 
 .button span {
