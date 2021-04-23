@@ -27,7 +27,7 @@ export default function Header(props) {
       <button className='button' onClick={props.toggleState}>
         <span>{!props.toggle ? "Munchies Options" : "Chosen Munchies"}</span>
       </button>
-      <PopUpForm addNewSnack={props.addNewSnack} />
+      {props.toggle ? <PopUpForm addNewSnack={props.addNewSnack} /> : null } 
       {!props.toggle ? (
         <button onClick={handleClick} className='button'>
           Randomizer 3000
@@ -44,3 +44,4 @@ export default function Header(props) {
     </div>
   );
 }
+      

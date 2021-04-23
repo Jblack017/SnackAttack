@@ -10,11 +10,8 @@
 
   }
 }
-.form{
-  background-color: #35836d;
-  opacity: .9;
-  border-color: #f4511e;
-}
+/* steven messed around here */
+
 .trigger-button {
   display: inline-block;
   border-radius: 4px;
@@ -44,6 +41,7 @@
   background-color: #35836d;
   opacity: .9;
 }
+/* to hereeeeeeeeeeeeeeee */
 .App {
   font-family: "Zen Dots", cursive;
   border: 1px solid black;
