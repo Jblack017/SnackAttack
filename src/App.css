@@ -1,6 +1,6 @@
 /* steven messed around here */
 
-.title{
+.title {
   grid-column-start: 3;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -113,7 +113,7 @@
 .header p {
   font-size: 2.4em;
   margin-bottom: 0;
-  margin-top: 18px ;
+  margin-top: 18px;
   animation-duration: 2s;
   animation-name: slidein;
   animation-direction: alternate;
@@ -265,7 +265,6 @@ html {
   margin: 5px;
   z-index: 99;
   opacity: 0.9;
-  
 }
 
 .button span {
@@ -417,7 +416,7 @@ html {
 
 .footer {
   position: fixed;
-  color:black;
+  color: black;
   z-index: 99;
   grid-column-start: 1;
   grid-column-end: 6;
@@ -425,7 +424,7 @@ html {
   grid-row-end: 3;
   bottom: 0;
   height: 60px;
-  width: 100%; 
+  width: 100%;
   text-align: center;
   background-position: center;
   background-size: contain;
@@ -440,6 +439,5 @@ html {
   );
 }
 .footer p {
-margin-top: 10px;
+  margin-top: 10px;
 }
-

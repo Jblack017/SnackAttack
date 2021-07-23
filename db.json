@@ -203,6 +203,12 @@
       "image": "https://www.familydollar.com/ccstore/v1/images/?source=/file/v7329171227639094989/products/FD1218253.jpg&height=475&width=475",
       "foodType": "Pastry",
       "id": 34
+    },
+    {
+      "name": "Cadbury Eggs",
+      "image": "https://i.ebayimg.com/images/g/tTEAAOSw3dReVhCz/s-l600.jpg",
+      "foodType": "Chocolate",
+      "id": 35
     }
   ]
 }
