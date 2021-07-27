@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SnackAttack/static/css/main.f1c42992.chunk.css",
-    "main.js": "/SnackAttack/static/js/main.eff23c85.chunk.js",
-    "main.js.map": "/SnackAttack/static/js/main.eff23c85.chunk.js.map",
+    "main.js": "/SnackAttack/static/js/main.4c9f7f94.chunk.js",
+    "main.js.map": "/SnackAttack/static/js/main.4c9f7f94.chunk.js.map",
     "runtime-main.js": "/SnackAttack/static/js/runtime-main.6c1f5999.js",
     "runtime-main.js.map": "/SnackAttack/static/js/runtime-main.6c1f5999.js.map",
     "static/css/2.23154d62.chunk.css": "/SnackAttack/static/css/2.23154d62.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.23154d62.chunk.css",
     "static/js/2.d341a32e.chunk.js",
     "static/css/main.f1c42992.chunk.css",
-    "static/js/main.eff23c85.chunk.js"
+    "static/js/main.4c9f7f94.chunk.js"
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "SnackAttack",
+  "name": "SnackAttack is an App designed to take the guess work out of having to choose a snack.",
   "icons": [
     {
       "src": "favicon.ico",
